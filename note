@@ -1,0 +1,103 @@
+Sync JavaSsript
+----------------
+
+=> javascript => single track programming language
+=> statement by statement => statement1
+                          => statement2
+                          => statement3
+=> statement by statement => sync javascript
+
+
+Async JavaSsript
+-----------------
+* start something now and finish later
+
+=> statement1
+   statement2
+   statement3 ===> database/api => get data => take some time
+   statement4   
+
+   (statement1/statement2/statement4 ===> statement3)    
+
+Http:Requests
+---------------    
+api/database <=====>get data // response data<====> http:request (get method)        
+
+data fectch on Api
+---------------------
+=> create obj => let request = new XMLHttpRequest()
+=> request.open("method","url")
+=> request.send()
+=> return json => JSON.parse => json file to object
+
+readystatechange (5states)
+-----------------
+=> Unsent
+=> Opened
+=> Headers-received
+=> Loading
+=> Done
+
+status code => 200 => all fine
+               404 => wrong url link 
+
+if(request.readyState == 4 && request.status == 200){
+   console.log(request)
+}else if(request.status == 404){
+   console.log(wrong url link)
+}
+
+callback function()
+---------------------
+maing function(function()) => main function ta ku atwin mhr nout function ta ku lo input ta ku any nk add lite chin pyit tl
+
+format => main function(callback function//hello)
+       => main function(hello)
+
+json 
+------
+language ta ku nk ta ku jrr connect lote pay
+eg => javascript <=> json code <=> php
+
+JSON.parse() => json file to object
+
+json => .json (file extension) => call => url link
+format => [
+            {
+            "code" : "string",
+            "code" : number,
+            "code" : boolean
+            },
+
+            {
+            "code" : "string",
+            "code" : number,
+            "code" : boolean
+            },
+          ]
+
+
+callback hell => function nested=> don't use
+
+Promise (resolve,reject)=> resolve() ==> data 
+                           reject() ==> error
+
+                           .then() => resolve code
+                           .catch() => reject code
+                           .finally() => after code
+
+fetch method
+--------------
+fetch method => promise return   => .then()  // .catch()
+             => api url wrong => .then() work
+
+error throw
+--------------
+if(data.status === 404){
+   throw new Error("url link is not found")
+}
+return data.json()
+
+.catch((err)=>{
+   console.log(err.message)
+})

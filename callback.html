@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Function</title>
+</head>
+<body>
+    <script>
+        /* callback function 
+        main function(callback function)
+        function ta ku htl ko ta chr functio ta ku ko input any nk add lite chin pyit tl
+        ko ko tile pyn call lox tok ma ya main function ka pyn call pay mk ya*/
+    
+        
+       function mainFunction(showData){
+           const pass = prompt("enter Your Password");
+
+           if(pass == 123){
+               showData()
+           }else{
+               showData()
+           }
+       }
+
+       function data(){
+           alert("your data ")
+       }
+
+       function rawData(){
+           alert("your raw data")
+       }
+
+       mainFunction(rawData)
+
+
+
+        
+    </script>
+</body>
+</html>
